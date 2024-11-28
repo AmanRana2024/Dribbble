@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble Clone</title>
+    <link rel="stylesheet" href="mainPage.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="Asset/pinkDribble.png">
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Find Work</a></li>
+                <li><a href="#">Learn Design</a></li>
+                <li><a href="#">Go Pro</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="profile-section">
+            <input type="text" class="search-box" placeholder="Search...">
+            <label for="file-upload" class="profile-image">
+                <img id="uploaded-image" src="Asset/—Pngtree—camera icon_4490535.png" alt="Profile Image">
+            </label>
+            <input type="file" id="file-upload" accept="image/*" onchange="displayImage(event)">
+            <button class="profile-upload-btn">Upload Profile</button>
+        </div>
+    </div>
+    </br>
+
+    <div class="discover-section">
+        <h2>Discover</h2>
+        <div class="discover-tabs">
+            <button>Popular</button>
+            <button>Discover</button>
+            <button>Animation</button>
+            <button>Branding</button>
+            <button>Illustration</button>
+            <button>Mobile</button>
+            <button>Print</button>
+            <button>Product Design</button>
+            <button>Typography</button>
+        </div>
+
+        
+        <div class="gallery-grid">
+            
+            <div class="card">
+                <video autoplay muted loop width="100%" style="border-radius: 10px;">
+                    <source src="Asset/vid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Ramotion Team</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="Asset/img2.jpg" alt="Design 2">
+                <p>Upnow Studio</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img3.jpg" alt="Design 3">
+                <p>Emote Team</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img4.jpg" alt="Design 4">
+                <p>Extē UI UX Design</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <video autoplay muted loop width="100%" style="border-radius: 10px;">
+                    <source src="Asset/vid2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Alex Tass</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img6.png" alt="Design 6">
+                <p>TikTak</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img8.jpg" alt="Design 2">
+                <p>Upnow Studio</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img9.png" alt="Design 3">
+                <p>Emote Team</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img10.png" alt="Design 4">
+                <p>Extē UI UX Design</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <video autoplay muted loop width="100%" style="border-radius: 10px;">
+                    <source src="Asset/vid3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Alex Tass</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img11.png" alt="Design 6">
+                <p>One Week Wonders</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img12.png" alt="Design 6">
+                <p>One Week Wonders</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img13.jpg" alt="Design 6">
+                <p>Lepisov Branding</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <video autoplay muted loop width="100%" style="border-radius: 10px;">
+                    <source src="Asset/vid4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Geex Arts</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+            <div class="card">
+                <img src="Asset/img14.jpg" alt="Design 6">
+                <p>Opndoo</p>
+                <div class="like-section">
+                    <button class="like-button" onclick="toggleLike(this)">❤ Like</button>
+                    <span class="like-count">59</span>
+                </div>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <ul class="comment-list"></ul>
+                    <input type="text" class="comment-input" placeholder="Add a comment..." onkeypress="addComment(event, this)">
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+    
+    <div class="upload-section">
+        <h2>Share Your Artwork</h2>
+        <p>Upload your creative designs and share them with the community!</p>
+        <form id="upload-form">
+           
+            <label for="artwork-title">Title:</label><br>
+            <input type="text" id="artwork-title" placeholder="Enter your artwork title" required><br><br>
+    
+            
+            <label for="artwork-description">About the Artwork:</label><br>
+            <textarea id="artwork-description" rows="4" placeholder="Describe your artwork..." required></textarea><br><br>
+    
+            
+            <label for="artwork-upload" class="upload-btn">
+                <input type="file" id="artwork-upload" accept="image/*,video/*" onchange="previewArtwork(event)" required>
+                Upload Artwork
+            </label>
+    
+           
+            <div class="preview-container">
+                <h3>Preview</h3>
+                <div id="preview-area">
+                </div>
+            </div>
+    
+            
+            <button type="submit" class="submit-artwork-btn">Submit</button>
+        </form>
+    </div>
+    
+    <div class="community-gallery">
+        <h2>Community Gallery</h2>
+
+        <div class="community-gallery">
+            <h2>My Showcases</h2>
+        <div class="gallery-grid" id="community-gallery-grid">
+        </div>
+    </div> 
+    </div> 
+
+
+<div class="additional-images">
+    <h2>Explore More Artwork</h2>
+    <div class="gallery-grid">
+        <div class="card">
+            <img src="Asset/img13.jpg" alt="Additional Design 1">
+            <p>Creative Studio</p>
+            <span>❤ 120 | 5.1k</span>
+        </div>
+        <div class="card">
+            <img src="Asset/img2.jpg" alt="Additional Design 2">
+            <p>Design Hub</p>
+            <span>❤ 98 | 3.7k</span>
+        </div>
+        <div class="card">
+            <img src="Asset/img14.jpg" alt="Additional Design 3">
+            <p>Artistic Minds</p>
+            <span>❤ 77 | 2.8k</span>
+        </div>
+        <div class="card">
+            <img src="Asset/img2.jpg" alt="Additional Design 4">
+            <p>Imaginative Studio</p>
+            <span>❤ 135 | 6.2k</span>
+        </div>
+        <div class="card">
+            <img src="Asset/img15.png" alt="Additional Design 5">
+            <p>Visual Creations</p>
+            <span>❤ 89 | 4.1k</span>
+        </div>
+    </div>
+</div>
+
+    <div class="footer">
+        <img class="image2" src="Asset/dribbble-logo-png-dribbble-logos-img-5000x1230.png">
+        <p class="a">Dribble is the world's leading</p>
+        <p class="a1">community for creatives to share, grow,</p>
+        <p class="a2">and get hired.</p>
+
+        <img class="dribbble" src="Asset/dribble.png">
+        <img class="twitter" src="Asset/twitter (2).png">
+        <img class="facebook" src="Asset/facebook (1).png">
+        <img class="instagram" src="Asset/instagram (1).png">
+        <img class="printerest" src="Asset/pinterest.png">
+
+        
+        <div class="pack1">
+            <h3>For designers</h3>
+            <h4>Go Pro!</h4>
+            <h4>Explore design work</h4>
+            <h4>Design blog</h4>
+            <h4>Overtime podcast</h4>
+            <h4>Playoffs</h4>
+            <h4>Weekly Warm-Up</h4>
+            <h4>Refer a Friend</h4>
+            <h4>Code of conduct</h4>
+        </div>
+        
+        <div class="pack2">
+            <h3>Hire designers</h3>
+            <h4>Post a job opening</h4>
+            <h4>Post a freelance project</h4>
+            <h4>Search for designers</h4>
+            
+            <h3>Brands</h3>
+            <h4>Advertise with us</h4>
+        </div>
+        
+        <div class="pack3">
+            <h3>Company</h3>
+            <h4>About</h4>
+            <h4>Careers</h4>
+            <h4>Support</h4>
+            <h4>Media Kit</h4>
+            <h4>Testimonials</h4>
+            <h4>API</h4>
+            <h4>Terms of service</h4>
+            <h4>Privacy policy</h4>
+            <h4>Cookie policy</h4>
+        </div>
+        
+        <div class="pack4">
+            <h3>Directories</h3>
+            <h4>Designers for hire</h4>
+            <h4>Freelance designers for hire</h4>
+            <h4>Tags</h4>
+            <h4>Places</h4>
+            
+            <h3>Design assets</h3>
+            <h4>Dribbble Marketplace</h4>
+            <h4>Fontspring</h4>
+            <h4>Font Squirrel</h4>
+        </div>
+        
+        <div class="pack5">
+            <h3>Design Resources</h3>
+            <h4>Freelancing</h4>
+            <h4>Design Hiring</h4>
+            <h4>Design Portfolio</h4>
+            <h4>Design Education</h4>
+            <h4>Design Process</h4>
+            <h4>Creative Process</h4>
+            <h4>Design Industry Trends</h4>
+        </div>
+
+        <div class="line">
+        <hr>
+        </div>
+
+        <div class="line">
+            <hr>
+        </div>
+
+        <p class="copyright">@2024 Dribbble. All rights reserved.</p>
+        <p class="shots"><b>21,345,990</b>&nbsp; shots dribbbled</p>
+        <img class="dribbble1" src="Asset/dribbble.png">
+    </div>
+
+    <script src="mainPage.js"></script>
+    <script>
+        function toggleLike(button) {
+            const likeCountElement = button.nextElementSibling;
+            let likeCount = parseInt(likeCountElement.textContent);
+
+            if (button.classList.contains('liked')) {
+                button.classList.remove('liked');
+                button.textContent = '❤ Like';
+                likeCount--;
+            } else {
+                button.classList.add('liked');
+                button.textContent = '🩷 Liked';
+                likeCount++;
+            }
+
+            likeCountElement.textContent = likeCount;
+        }
+
+        function addComment(event, input) {
+            if (event.key === 'Enter' && input.value.trim() !== '') {
+                const commentList = input.previousElementSibling;
+                const newComment = document.createElement('li');
+                newComment.textContent = input.value;
+                commentList.appendChild(newComment);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

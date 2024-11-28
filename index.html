@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" type="text/css" href="dribble.css">
+</head>
+<body>
+    <div class="container" id="loadingDiv">
+        <img src="Asset/dribble-logo-5.gif" alt="Loading GIF">
+    </div>
+    <form action="#" method="post" id="sign-up-form">
+        <div class="signin">
+            <p>Already a member? <a href="#">Sign in</a></p>
+        </div>
+        <div class="form-container">
+            <div class="left-side">
+                <img src="Asset/banner.jpg" alt="Image">
+            </div>
+            <div class="right-side">
+                <h3 class="Signup">Sign up to Dribbble</h3>
+                <div class="row">
+                    <div class="column">
+                        <label for="name"><b>Name:</b></label>
+                        <input type="text" id="name" name="name" style="width: 120px; height: 12px;">
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    <div class="column">
+                        <label for="username"><b>Username:</b></label>
+                        <input type="text" id="username" name="username"  style="width: 100px; height: 12px;">
+                        <div class="error-message" id="username-error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="email"><b>Email:</b></label>
+                        <input type="email" id="email" name="email" style="width: 250px; height: 12px;">
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label for="password"><b>password:</b></label>
+                        <input type="password" id="password" name="password" style="width: 250px; height: 12px;">
+                        <div class="error-message" id="password-error"></div>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">By creating an account, you agree to our <span class="color1">Terms of Service</span> and <span class="color2">privacy policy</span>.</label>
+                </div>
+               
+               <div class="error-message" id="terms-error"></div>
+                <button type="submit" id="create-account-button">Create Account</button>
+                <p>This site is protected by reCApTCHA and the Google <span class="color3">privacy policy</span> and <span class="color4">Terms of Service</span> apply.</p>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        var displayTime = 8000;
+
+        function showMainContent() {
+            document.getElementById('loadingDiv').classList.add('hidden');
+            document.getElementById('mainDiv').classList.remove('hidden');
+        }
+        setTimeout(showMainContent, displayTime);
+    </script>
+    <script src="dribble.js"></script>
+</body>
+</html>
